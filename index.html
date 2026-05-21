@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYTEX L-Core | Ultimate Game Translator</title>
+    <meta name="description" content="Oyunlar için tasarlanmış, anlık ekran okuyucu ve çevirici yazılım.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- CRT Scanline Overlay -->
+    <div class="crt-overlay"></div>
+
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">SYTEX<span class="highlight"> L-CORE</span> <span class="beta-tag">BETA</span></div>
+            <div class="nav-links">
+                <a href="#features">Özellikler</a>
+                <a href="#download" class="nav-btn">İndir</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="badge fade-in">V2.0 PUBLIC BETA</div>
+            <h1 class="glitch-text fade-in" data-text="DİL ENGELİNİ AŞ">DİL ENGELİNİ AŞ</h1>
+            <p class="fade-in">Oyunlardaki yabancı metinleri anında algıla ve ekranda balonluklarla çevir. Hikayeyi kaçırma, kesintisiz oyna.</p>
+            
+            <div class="hero-actions fade-in">
+                <!-- Dosya doğrudan Github Releases'ten inecek -->
+                <div class="btn-group">
+                    <a href="https://github.com/sytex10/sytex-lcore/releases/latest/download/SYTEX_L-Core_Setup.exe" class="pixel-btn primary-btn" target="_blank">
+                        <span class="btn-text">HEMEN İNDİR (366 MB)</span>
+                        <span class="btn-shadow"></span>
+                    </a>
+                    <a href="https://www.buymeacoffee.com/sytex" target="_blank" class="pixel-btn donate-btn">
+                        <span class="btn-text">☕ DESTEK OL</span>
+                        <span class="btn-shadow"></span>
+                    </a>
+                </div>
+                <span class="os-info">Sadece Windows 10/11 (64-bit)</span>
+            </div>
+        </div>
+    </header>
+
+    <section id="features" class="features container">
+        <h2 class="section-title fade-in">SİSTEM ÖZELLİKLERİ</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card fade-in">
+                <div class="card-icon">⚡</div>
+                <h3>ANLIK ÇEVİRİ</h3>
+                <p>Ekranda beliren yabancı metni saniyeler içinde okur ve tam üzerinde bir çeviri baloncuğu oluşturur.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="card-icon">🌐</div>
+                <h3>ÇEVRİMDIŞI OCR</h3>
+                <p>Uygulama içine gömülü Tesseract OCR motoru sayesinde metin algılamayı internet olmadan inanılmaz hızlı yapar.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="card-icon">🎮</div>
+                <h3>OYUNCU DOSTU</h3>
+                <p>Oyunlarını tam ekran pencereli (Borderless) moda otomatik geçirir, Alt+Tab atmadan oyunun içinde kalmanı sağlar.</p>
+            </div>
+            <div class="feature-card fade-in">
+                <div class="card-icon">🎨</div>
+                <h3>PİXEL ART TEMA</h3>
+                <p>Özel karanlık tema ve neon renklerle tasarlanmış 8-bit retro esintili arayüzü göz yormaz.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 SYTEX YAZILIM. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
