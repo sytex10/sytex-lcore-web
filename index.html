@@ -25,7 +25,7 @@
             <div class="logo">SYTEX<span class="highlight"> L-CORE</span> <span class="beta-tag">BETA</span></div>
             <div class="nav-links">
                 <a href="#features">Özellikler</a>
-                <a href="https://github.com/sytex10/sytex-lcore/issues" target="_blank">Geri Bildirim</a>
+                <a href="#" id="openFeedback">Geri Bildirim</a>
                 <a href="https://github.com/sytex10/sytex-lcore/releases/latest/download/SYTEX_L-Core_Setup.exe" class="nav-btn" target="_blank">İndir</a>
             </div>
         </div>
@@ -92,6 +92,29 @@
             </ul>
         </div>
     </section>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.5rem;">GERİ BİLDİRİM</h2>
+            <form action="https://formsubmit.co/ipekmuhammetemin@gmail.com" method="POST" class="feedback-form">
+                <!-- Güvenlik ve Yönlendirme Ayarları -->
+                <input type="hidden" name="_subject" value="SYTEX L-Core Web - Yeni Geri Bildirim!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://sytex10.github.io/sytex-lcore-web/">
+                
+                <input type="text" name="isim" placeholder="Adınız / Kullanıcı Adınız" required class="pixel-input">
+                <input type="email" name="email" placeholder="E-Posta Adresiniz" required class="pixel-input">
+                <textarea name="mesaj" placeholder="Mesajınız, öneriniz veya bulduğunuz bir hata..." required class="pixel-input" rows="5"></textarea>
+                
+                <button type="submit" class="pixel-btn primary-btn" style="margin-top: 15px;">
+                    <span class="btn-text" style="padding: 15px 30px;">GÖNDER</span>
+                    <span class="btn-shadow"></span>
+                </button>
+            </form>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">

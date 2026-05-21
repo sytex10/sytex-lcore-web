@@ -31,4 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }, 2000);
     }
+
+    // Modal Mantığı (Geri Bildirim)
+    const modal = document.getElementById("feedbackModal");
+    const btn = document.getElementById("openFeedback");
+    const span = document.getElementsByClassName("close-btn")[0];
+
+    if (btn && modal && span) {
+        btn.onclick = function(e) {
+            e.preventDefault();
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    }
 });
