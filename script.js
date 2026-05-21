@@ -36,21 +36,59 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("feedbackModal");
     const btn = document.getElementById("openFeedback");
     const span = document.getElementsByClassName("close-btn")[0];
+    const form = document.getElementById("feedbackForm");
+    const successDiv = document.getElementById("feedbackSuccess");
 
     if (btn && modal && span) {
         btn.onclick = function(e) {
             e.preventDefault();
             modal.style.display = "block";
+            if (form && successDiv) {
+                form.style.display = "flex";
+                successDiv.style.display = "none";
+                form.reset();
+            }
         }
 
-        span.onclick = function() {
+        const closeModal = function() {
             modal.style.display = "none";
         }
 
+        span.onclick = closeModal;
+
         window.onclick = function(event) {
             if (event.target == modal) {
-                modal.style.display = "none";
+                closeModal();
             }
         }
+    }
+
+    // AJAX Form Gönderimi
+    if (form) {
+        form.addEventListener("submit", function(e) {
+            e.preventDefault(); 
+            
+            const submitBtnText = form.querySelector('.btn-text');
+            const originalText = submitBtnText.innerText;
+            submitBtnText.innerText = "GÖNDERİLİYOR...";
+            
+            const formData = new FormData(form);
+            
+            fetch("https://formsubmit.co/ajax/ipekmuhammetemin@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                form.style.display = "none";
+                successDiv.style.display = "block";
+                submitBtnText.innerText = originalText;
+            })
+            .catch(error => {
+                submitBtnText.innerText = "HATA OLUŞTU!";
+                console.error(error);
+                setTimeout(() => { submitBtnText.innerText = originalText; }, 3000);
+            });
+        });
     }
 });
