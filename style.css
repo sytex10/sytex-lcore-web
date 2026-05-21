@@ -300,6 +300,42 @@ body {
     border-color: #FFFFFF;
 }
 
+/* Requirements Box */
+.req-box {
+    background: var(--card-bg);
+    border: 3px solid rgba(255, 0, 127, 0.3);
+    padding: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.req-box ul {
+    list-style-type: none;
+}
+
+.req-box li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.req-box li::before {
+    content: "►";
+    color: var(--neon-cyan);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.8rem;
+}
+
+.req-box strong {
+    color: var(--neon-pink);
+    font-family: var(--pixel-font);
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
 /* Animations */
 .fade-in {
     opacity: 0;
